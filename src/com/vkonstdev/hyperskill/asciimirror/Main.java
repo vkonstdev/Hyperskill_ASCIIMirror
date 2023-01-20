@@ -2,7 +2,7 @@ package com.vkonstdev.hyperskill.asciimirror;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -20,11 +20,11 @@ public class Main {
         }
     }
 
-    public static void printCow() {
+    /*public static void printCow() {
         System.out.println("            ^__^");
         System.out.println("    _______/(oo)");
         System.out.println("/\\/(       /(__)");
         System.out.println("   | w----||    ");
         System.out.println("   ||     ||    ");
-    }
+    }*/
 }
