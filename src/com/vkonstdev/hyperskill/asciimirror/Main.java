@@ -30,9 +30,34 @@ public class Main {
             if (el.length() < maxString.length()) {
                 el += " ".repeat(maxString.length() - el.length());
             }
-            el = el + " | " + el;
+            el = el + " | " + reverseString(el);
             System.out.println(el);
         }
+    }
+
+    private static String reverseString(String in) {
+        char[] letters = in.toCharArray();
+        for (int i = 0; i < letters.length / 2; i++) {
+            char temp = letters[i];
+            letters[i] = letters[letters.length - 1 - i];
+            letters[letters.length - 1 - i] = temp;
+        }
+        for (int i = 0; i < letters.length; i++) {
+            switch (letters[i]) {
+                case '(' -> letters[i] = ')';
+                case ')' -> letters[i] = '(';
+                case '>' -> letters[i] = '<';
+                case '<' -> letters[i] = '>';
+                case '[' -> letters[i] = ']';
+                case ']' -> letters[i] = '[';
+                case '{' -> letters[i] = '}';
+                case '}' -> letters[i] = '{';
+                case '/' -> letters[i] = '\\';
+                case '\\' -> letters[i] = '/';
+                default -> letters[i] = letters[i];
+            }
+        }
+        return String.valueOf(letters);
     }
 
     /*public static void printCow() {
